@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<button>Add expense</button>
+
+<h2>Recent expenses</h2>
+
+{% for transaction in transactions %}
+
+<div>
+    <ul>
+        <li>{{transaction.description}}</li>
+        <li>£{{transaction.amount}}</li>
+        <li>{{transaction.date}}</li>
+    </ul>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
