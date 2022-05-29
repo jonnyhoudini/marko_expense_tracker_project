@@ -50,27 +50,27 @@ main {
     font-size: 14px;
 }
 
-#transactions {
+#table {
     border-collapse: collapse;
     width: 90%;
     margin: auto;
 }
 
-#transactions td,
-#transactions th {
+#table td,
+#table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#transactions tr:nth-child(even) {
+#table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#transactions tr:hover {
+#table tr:hover {
     background-color: #ddd;
 }
 
-#transactions th {
+#table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;

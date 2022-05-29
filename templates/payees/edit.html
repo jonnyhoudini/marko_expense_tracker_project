@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Update payee details</h1>
+
+<form action="/payees/{{payee.id}}" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="{{payee.name}}" autofocus required>
+    <button type="submit">Update payee</button>
+</form>
+{% endblock %}

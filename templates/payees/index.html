@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Spending by payee</h1>
+
+<form action="/payees" method="post">
+    <input type="text" name="name" id="name" placeholder="Name of new payee">
+    <button type="submit">Create payee</button>
+</form>
+
+<table id="table">
+    <tr>
+        <th>Name</th>
+        <th>Transactions</th>
+        <th>Total</th>
+    </tr>
+
+
+    {% for payee in payees %}
+
+    <tr>
+        <td><a href="/payees/{{payee.id}}/edit">{{payee.name}}</a></td>
+        <td>99</td>
+        <td>£200</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

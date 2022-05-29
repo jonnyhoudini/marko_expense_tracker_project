@@ -1,3 +1,4 @@
+from logging.config import IDENTIFIER
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 
@@ -58,4 +59,22 @@ def edit_transaction(id):
     categories = category_repository.select_all()
     return render_template('transactions/edit.html', transaction = transaction, payees = payees, categories = categories)
 
-# EDIT
+# UPDATE
+
+@transactions_blueprint.route('/transactions/<id>', methods=['POST'])
+def update_transaction(id):
+    description = request.form['description']
+    amount = request.form['amount']
+    payee_id = request.form['payee_id']
+    date = request.form['date']
+    category_id = request.form['category_id']
+    payee = payee_repository.select(payee_id)
+    category = category_repository.select(category_id)
+    transaction = Transaction(description, amount, payee, date, category, id)
+    transaction_repository.update(transaction)
+    return redirect('/transactions')
+
+@transactions_blueprint.route('/transactions/<id>/delete', methods=['POST'])
+def delete_transaction(id):
+    transaction_repository.delete(id)
+    return redirect('/transactions')

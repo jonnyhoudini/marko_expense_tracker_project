@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Spending by category</h1>
+
+<form action="/categories" method="post">
+    <input type="text" name="name" id="name" placeholder="Name of new category">
+    <button type="submit">Create category</button>
+</form>
+
+<table id="table">
+    <tr>
+        <th>Category</th>
+        <th>Transactions</th>
+        <th>Total</th>
+    </tr>
+
+
+    {% for category in categories %}
+
+    <tr>
+        <td><a href="/categories/{{category.id}}/edit">{{category.name}}</a></td>
+        <td>99</td>
+        <td>£200</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

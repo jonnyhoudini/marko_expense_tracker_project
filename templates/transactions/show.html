@@ -10,7 +10,8 @@
     <p>{{transaction.date}}</p>
     <p>{{transaction.payee.name}}</p>
     <p>{{transaction.category.name}}</p>
-    <p><a href="/transactions/{{transaction.id}}/edit">Edit</a> <a href="">Delete</a></p>
+    <p><a href="/transactions/{{transaction.id}}/edit">Edit</a></p>
+    <form action="/transactions/{{transaction.id}}/delete" method="POST"><button>Delete</button></form>
 </div>
 
 
