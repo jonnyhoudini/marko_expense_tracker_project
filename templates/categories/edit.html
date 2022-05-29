@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Update category details</h1>
+
+<form action="/categories/{{category.id}}" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="{{category.name}}" autofocus required>
+    <button type="submit">Update category</button>
+</form>
+
+{% endblock %}
