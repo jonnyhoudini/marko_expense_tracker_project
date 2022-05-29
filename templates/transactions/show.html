@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <img src="https://merriam-webster.com/assets/mw/images/article/art-wap-article-main/meme-boy-gets-paid-4140-196a182847d3123a0e377b1059e07ceb@1x.jpg"
+        alt="boy gets paid" style="width:100%">
+    <h2>{{transaction.description}}</h2>
+    <p class="amount">{{transaction.amount}}</p>
+    <p>{{transaction.date}}</p>
+    <p>{{transaction.payee.name}}</p>
+    <p>{{transaction.category.name}}</p>
+    <p><a href="/transactions/{{transaction.id}}/edit">Edit</a> <a href="">Delete</a></p>
+</div>
+
+
+{% endblock %}

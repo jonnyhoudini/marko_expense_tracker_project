@@ -19,11 +19,15 @@ def transactions():
         total += transaction.amount
     return render_template('transactions/transactions.html', transactions = transactions, total = total)
 
+# NEW
+
 @transactions_blueprint.route("/transactions/new", methods=['GET'])
 def new_transaction():
     payees = payee_repository.select_all()
     categories = category_repository.select_all()
     return render_template("transactions/new.html", payees = payees, categories = categories)
+
+# CREATE
 
 @transactions_blueprint.route("/transactions", methods=['POST'])
 def create_transaction():
@@ -38,3 +42,20 @@ def create_transaction():
     transaction_repository.save(transaction)
     return redirect('/transactions')
 
+# SHOW
+
+@transactions_blueprint.route("/transactions/<id>", methods = ['GET'])
+def show_transaction(id):
+    transaction = transaction_repository.select(id)
+    return render_template('transactions/show.html', transaction = transaction)
+
+# EDIT
+
+@transactions_blueprint.route('/transactions/<id>/edit', methods=['GET'])
+def edit_transaction(id):
+    transaction = transaction_repository.select(id)
+    payees = payee_repository.select_all()
+    categories = category_repository.select_all()
+    return render_template('transactions/edit.html', transaction = transaction, payees = payees, categories = categories)
+
+# EDIT

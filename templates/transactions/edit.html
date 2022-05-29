@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Edit expense</h1>
+
+<form action="/transactions/{{transaction.id}}" method="post">
+
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" value="{{transaction.description}}" required autofocus>
+
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" name="amount" value="{{transaction.amount}}" required>
+
+    <label for="payee">Payee</label>
+    <select name="payee_id" id="payee">
+        {% for payee in payees %}
+
+        <option value="{{payee.id}}" {% if transaction.payee.id==payee.id %} selected="selected" {% endif %}>
+            {{payee.name}} </option>
+
+        {% endfor %}
+    </select>
+
+    <label for="date">Date</label>
+    <input type="text" id="date" name="date" value="{{transaction.date}}" required>
+
+    <label for="category">Category</label>
+    <select name="category_id" id="category">
+        {% for category in categories %}
+
+        <option value="{{category.id}}" {% if transaction.category.id==category.id %} selected="selected" {% endif %}>
+            {{category.name}}</option>
+
+        {% endfor %}
+    </select>
+
+    <button type="submit">Update expense</button>
+
+</form>
+
+{% endblock %}
