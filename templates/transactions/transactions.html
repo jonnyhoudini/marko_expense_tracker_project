@@ -7,6 +7,12 @@
 
 <p>Total claims: £{{total}}</p>
 
+{% if total > limit %}
+
+<p style="color:red">Warning! You are over the monthly limit!</p>
+
+{% endif %}
+
 <h2>Recent expenses</h2>
 
 <table id="table">
