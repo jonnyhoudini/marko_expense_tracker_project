@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Update expenses limit</h1>
+
+<form action="/users/{{user.id}}" method="post">
+    <label for="limit">New limit</label>
+    <input type="number" name="limit" id="limit" value="{{user.limit}}" autofocus required>
+    <button type="submit">Update limit</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Update expenses limit</h1>
+
+<p>Do you really want to set a new limit for {{user.name}}'s claims?</p>
+<a href="/users/{{user.id}}/edit">YES</a>
+
+{% endblock %}

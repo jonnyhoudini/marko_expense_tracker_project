@@ -5,17 +5,20 @@ from flask import Blueprint
 from models.transaction import *
 from models.category import *
 from models.payee import *
+from models.user import *
 
 import repositories.transaction_repository as transaction_repository
 import repositories.category_repository as category_repository
 import repositories.payee_repository as payee_repository
+import repositories.user_repository as user_repository
 
 transactions_blueprint = Blueprint("transactions", __name__)
 
 @transactions_blueprint.route("/transactions")
 def transactions():
     transactions = transaction_repository.select_all()
-    limit = 1000
+    users = user_repository.select_all()
+    limit = users[0].limit
     total = 0
     for transaction in transactions:
         total += transaction.amount

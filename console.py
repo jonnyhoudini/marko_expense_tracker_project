@@ -2,17 +2,24 @@ import pdb
 from models.payee import *
 from models.category import *
 from models.transaction import Transaction
+from models.user import *
 
 import repositories.payee_repository as payee_repository
 import repositories.category_repository as category_repository
 import repositories.transaction_repository as transaction_repository
+import repositories.user_repository as user_repository
 
 # Deleting everything to reseed the database
 transaction_repository.delete_all()
 payee_repository.delete_all()
 category_repository.delete_all()
+user_repository.delete_all()
 
 
+# Creating a user using the default limit
+user = User("Theodore Templeton")
+user_repository.save(user)
+print(user.id)
 # Checking the create and read functions for payees
 payee1 = Payee("La Vita")
 payee_repository.save(payee1)

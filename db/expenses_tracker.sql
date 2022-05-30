@@ -32,5 +32,5 @@ CREATE TABLE transactions (
 CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR,
-    limit INT
-)
+    expenses_limit INT
+);
