@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper .sidebar {
-    background: #495057;
+    background: #ADB5BD;
     color: whitesmoke;
     position: fixed;
     top: 0;
@@ -41,17 +41,30 @@ main {
 }
 
 .wrapper .sidebar .profile h3 {
-    color: #ffffff;
+    color: #343A40;
     margin: 10px 0 5px;
 }
 
 .wrapper .sidebar .profile p {
-    color: rgb(206, 240, 253);
+    color: #6C757D;
     font-size: 14px;
 }
 
 nav ul li a {
-    color: rgb(206, 240, 253);
+    color: #212529;
+    display: block;
+    padding: 8px 16px;
+}
+
+nav ul li a:hover {
+    background-color: #6C757D;
+    color: #F8F9FA;
+}
+
+.active,
+.active:hover {
+    background-color: #343A40;
+    color: #F8F9FA;
 }
 
 #table {
