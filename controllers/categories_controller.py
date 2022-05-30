@@ -5,13 +5,20 @@ from flask import Blueprint
 from models.category import *
 
 import repositories.category_repository as category_repository
+import repositories.transaction_repository as transaction_repository
 
 categories_blueprint = Blueprint("categories", __name__)
 
 @categories_blueprint.route('/categories')
 def categories():
     categories = category_repository.select_all()
-    return render_template('/categories/index.html', categories = categories)
+    transactions = transaction_repository.select_all()
+    categories_with_totals = []
+    for category in categories:
+        category.amount_of_transactions = category.get_total_amount_of_transactions(transactions)
+        category.number_of_transactions = category.get_total_number_of_transactions(transactions)
+        categories_with_totals.append(category)
+    return render_template('/categories/index.html', categories = categories_with_totals)
 
 @categories_blueprint.route('/categories', methods=['POST'])
 def create_category():

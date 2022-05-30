@@ -6,13 +6,21 @@ from flask import Blueprint
 from models.payee import *
 
 import repositories.payee_repository as payee_repository
+import repositories.transaction_repository as transaction_repository
 
 payees_blueprint = Blueprint("payees", __name__)
 
 @payees_blueprint.route('/payees')
 def payees():
     payees = payee_repository.select_all()
-    return render_template('payees/index.html', payees = payees)
+    transactions = transaction_repository.select_all()
+    payees_with_totals = []
+    for payee in payees:
+        payee.amount_of_transactions = payee.get_total_amount_of_transactions(transactions)
+        payee.number_of_transactions = payee.get_total_number_of_transactions(transactions)
+        payees_with_totals.append(payee)
+
+    return render_template('payees/index.html', payees = payees_with_totals)
 
 @payees_blueprint.route('/payees', methods=['POST'])
 def create_payee():

@@ -50,6 +50,10 @@ main {
     font-size: 14px;
 }
 
+nav ul li a {
+    color: rgb(206, 240, 253);
+}
+
 #table {
     border-collapse: collapse;
     width: 90%;

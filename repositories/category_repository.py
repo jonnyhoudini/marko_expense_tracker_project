@@ -50,3 +50,4 @@ def update(category):
     sql = "UPDATE categories SET (name) = (?) WHERE id = ?"
     values = [category.name, category.id]
     run_sql(sql, values)
+
