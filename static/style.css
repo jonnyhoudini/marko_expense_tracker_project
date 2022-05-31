@@ -8,7 +8,8 @@
 }
 
 body {
-    background: #F8F9FA;
+    background-color: #F8F9FA;
+    background-image: url("https://svgshare.com/i/hr2.svg");
 }
 
 .wrapper .sidebar {
@@ -67,6 +68,12 @@ nav ul li a:hover {
     color: #F8F9FA;
 }
 
+#logo {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+}
+
 #table {
     border-collapse: collapse;
     width: 90%;
@@ -106,4 +113,93 @@ nav ul li a:hover {
 .price {
     color: grey;
     font-size: 22px;
+}
+
+/* Form Styling */
+
+.big-form {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.big-submit {
+    width: 100%;
+    background-color: #e47260;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.big-submit:hover {
+    background-color: #cc7c86;
+}
+
+.new-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 25px;
+}
+
+.add-expense,
+.limit {
+    background-color: #DEE2E6;
+    color: #343E40;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    display: block;
+    border-radius: 7%;
+    font-size: 1.5em;
+}
+
+.add-expense:hover,
+.limit:hover {
+    background-color: #bcbae6;
+}
+
+.add-expense:active,
+.limit:active {
+    background-color: #cc7c86;
+}
+
+/* Total button */
+
+.total {
+    font-size: 0.6em;
+    margin-bottom: 5px;
+}
+
+.figure {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 0.6em;
+    margin-top: 15px;
+}
+
+/* Buttons section */
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
 }

@@ -11,15 +11,34 @@ class="active"
 {% block content %}
 <h1>Dashboard</h1>
 
-<a href="/transactions/new">Add expense</a>
+<section class="buttons">
+    <a class="add-expense" href="/transactions/new">
 
-<p>Total claims: £{{total}}</p>
+        Add expense
 
-{% if total > limit %}
+        <i class="fa-solid fa-coins"></i>
 
-<p style="color:red">Warning! You are over the monthly limit!</p>
+    </a>
 
-{% endif %}
+    <a href="/users" class="limit">
+
+        <p class="total">Total</p>
+
+        <p class="figure">£{{total}}</p>
+
+        {% if total > limit %}
+
+        <p class="icon">You are over the limit</p>
+
+        <i class="fa-solid fa-circle-exclamation fa-beat" style="color: #e47260"></i>
+
+        {% else %}
+
+        <i class="fa-solid fa-circle-check icon" style="font-size: 1em"></i>
+
+        {% endif %}
+    </a>
+</section>
 
 <h2>Recent expenses</h2>
 

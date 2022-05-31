@@ -6,37 +6,39 @@
 
 <h1>New expense</h1>
 
-<form action="/transactions" method="post">
+<div class="new-form">
+    <form action="/transactions" method="post">
 
-    <label for="description">Description</label>
-    <input type="text" id="description" name="description" placeholder="Lunch with client" required autofocus>
+        <label for="description">Description</label>
+        <input class="big-form" type="text" id="description" name="description" placeholder="Lunch with client" required
+            autofocus>
 
-    <label for="amount">Amount</label>
-    <input type="number" id="amount" name="amount" required>
+        <label for="amount">Amount</label>
+        <input class="big-form" type="number" id="amount" name="amount" required>
 
-    <label for="payee">Payee</label>
-    <select name="payee_id" id="payee">
-        {% for payee in payees %}
+        <label for="payee">Payee</label>
+        <select class="big-form" name="payee_id" id="payee">
+            {% for payee in payees %}
 
-        <option value="{{payee.id}}"> {{payee.name}} </option>
+            <option value="{{payee.id}}"> {{payee.name}} </option>
 
-        {% endfor %}
-    </select>
+            {% endfor %}
+        </select>
 
-    <label for="date">Date</label>
-    <input type="text" id="date" name="date" placeholder="20 May 2022" required>
+        <label for="date">Date</label>
+        <input class="big-form" type="text" id="date" name="date" placeholder="20 May 2022" required>
 
-    <label for="category">Category</label>
-    <select name="category_id" id="category">
-        {% for category in categories %}
+        <label for="category">Category</label>
+        <select class="big-form" name="category_id" id="category">
+            {% for category in categories %}
 
-        <option value="{{category.id}}">{{category.name}}</option>
+            <option value="{{category.id}}">{{category.name}}</option>
 
-        {% endfor %}
-    </select>
+            {% endfor %}
+        </select>
 
-    <button type="submit">Add expense</button>
+        <button class="big-submit" type="submit">Add expense</button>
 
-</form>
-
+    </form>
+</div>
 {% endblock %}
