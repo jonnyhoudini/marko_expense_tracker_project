@@ -80,6 +80,7 @@ nav ul li a:hover {
     border-collapse: collapse;
     width: 90%;
     margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #table td,
@@ -126,10 +127,18 @@ nav ul li a:hover {
 
 .container {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 40%;
+    transition: 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    padding: 2px 16px;
+    background-color: #E9ECEF;
     margin: auto;
-    text-align: center;
-    font-family: arial;
 }
 
 .price {
@@ -171,13 +180,19 @@ button[type=submit]:hover,
 }
 
 .new-form,
-.container {
+.container-limit {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     width: 90%;
     margin: auto;
     margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-limit {
+    width: 50%;
+    text-align: center;
 }
 
 h1,
@@ -201,6 +216,7 @@ h2 {
     display: block;
     border-radius: 7%;
     font-size: 1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .add-expense:hover,
