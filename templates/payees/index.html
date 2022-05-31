@@ -6,10 +6,12 @@
 
 <h1>Spending by payee</h1>
 
-<form action="/payees" method="post">
-    <input type="text" name="name" id="name" placeholder="Name of new payee">
-    <button type="submit">Create payee</button>
-</form>
+<div class="new-form">
+    <form action="/payees" method="post">
+        <input type="text" name="name" id="name" placeholder="Name of new payee">
+        <button type="submit">Create payee</button>
+    </form>
+</div>
 
 <table id="table">
     <tr>
@@ -22,7 +24,7 @@
     {% for payee in payees %}
 
     <tr>
-        <td><a href="/payees/{{payee.id}}/edit">{{payee.name}}</a></td>
+        <td><a href="/payees/{{payee.id}}/edit" class="rowlink">{{payee.name}}</a></td>
         <td>{{payee.number_of_transactions}}</td>
         <td>{{payee.amount_of_transactions}}</td>
     </tr>

@@ -3,7 +3,13 @@
 {% block content %}
 <h1>Update expenses limit</h1>
 
-<p>Do you really want to set a new limit for {{user.name}}'s claims?</p>
-<a href="/users/{{user.id}}/edit">YES</a>
+<div class="container">
+    <h3>WARNING</h3>
+    <br>
+    <p>Are you sure you want to set a new expenses limit for {{user.name}}?</p>
+    <br>
+    <br>
+    <a class="button" href="/users/{{user.id}}/edit">YES</a>
+</div>
 
 {% endblock %}
