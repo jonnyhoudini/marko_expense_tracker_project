@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 
@@ -93,6 +93,10 @@ nav ul li a:hover {
     background-color: #f2f2f2;
 }
 
+#table tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
 #table tr:hover {
     background-color: #e47260;
     color: #f2f2f2;
@@ -116,6 +120,11 @@ nav ul li a:hover {
     color: #f2f2f2;
 }
 
+#table button {
+    border: none;
+    background-color: transparent;
+}
+
 .rowlink::before {
     content: "";
     display: block;
@@ -127,18 +136,18 @@ nav ul li a:hover {
 
 .container {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 40%;
     transition: 0.3s;
+    width: 40%;
+    margin: 50px auto;
 }
 
 .container:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    ox-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card {
-    padding: 2px 16px;
+    padding: 2px 16px 15px;
     background-color: #E9ECEF;
-    margin: auto;
 }
 
 .price {
@@ -198,7 +207,7 @@ button[type=submit]:hover,
 h1,
 h2 {
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 5%;
     margin-bottom: 25px;
     color: #212529;
     font-weight: 700;
@@ -266,4 +275,52 @@ h2 {
 .coin {
     font-size: 2em;
     margin-top: 10px;
+}
+
+.sideicon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.warning-icon {
+    font-size: 1.4em;
+}
+
+.small-icon {
+    font-size: 1.5em;
+}
+
+.small-icon:hover {
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.card-layout {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+h4 {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+div>form>button,
+div>a {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #e47260;
+}
+
+div>form>button:hover,
+div>a:hover {
+    color: #bcbae6;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #6C757D;
+
 }

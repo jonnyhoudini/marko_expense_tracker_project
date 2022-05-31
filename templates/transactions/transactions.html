@@ -28,10 +28,10 @@ class="active"
 
         {% if total > limit %}
 
-        <p class="warning-p">You are over the limit</p>
+        <p class="warning-p">You are over the limit
 
-        <i class="fa-solid fa-circle-exclamation fa-beat" style="color: #e47260"></i>
-
+            <i class="fa-solid fa-circle-exclamation fa-beat warning-icon" style="color: #e47260"></i>
+        </p>
         {% else %}
 
         <i class="fa-solid fa-circle-check icon"></i>
@@ -49,17 +49,23 @@ class="active"
         <th>Category</th>
         <th>Date</th>
         <th>Amount</th>
+        <th></th>
     </tr>
 
 
     {% for transaction in transactions %}
 
     <tr>
-        <td><a href="/transactions/{{transaction.id}}" class="rowlink">{{transaction.description}}</a></td>
+        <td><a href="/transactions/{{transaction.id}}" class="rowlink"></a>{{transaction.description}}</td>
         <td>{{transaction.payee.name}}</td>
         <td>{{transaction.category.name}}</td>
         <td>{{transaction.date}}</td>
         <td>£{{transaction.amount}}</td>
+        <td>
+            <a href="/transactions/{{transaction.id}}/edit"><i class="fa-solid fa-pen-to-square small-icon"></i></a>
+            <form action="/transactions/{{transaction.id}}/delete" method="POST"><button><i
+                        class="fa-solid fa-trash-can small-icon"></i></button></form>
+        </td>
     </tr>
 
     {% endfor %}

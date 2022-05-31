@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <title>Marko</title>
 </head>
@@ -27,11 +27,16 @@
             </div>
             <nav>
                 <ul>
-                    <li><a {% block activedash %} {% endblock %} href="/transactions">Dashboard</a></li>
-                    <li><a {% block activecat %} {% endblock %}href="/categories">Categories</a> </li>
-                    <li><a {% block activepay %} {% endblock %}href="/payees">Payees</a></li>
-                    <li><a {% block activetrans %} {% endblock %}href="/transactions/new">Add expense</a></li>
-                    <li><a {% block activelimit %} {% endblock %}href="/users">Set limit</a></li>
+                    <li><a {% block activedash %} {% endblock %} href="/transactions"><i
+                                class="fa-solid fa-gauge-high sideicon"></i>Dashboard</a></li>
+                    <li><a {% block activecat %} {% endblock %}href="/categories"><i
+                                class="fa-solid fa-cubes-stacked sideicon"></i>Categories</a> </li>
+                    <li><a {% block activepay %} {% endblock %}href="/payees"><i
+                                class="fa-solid fa-money-bill-1-wave sideicon"></i>Payees</a></li>
+                    <li><a {% block activetrans %} {% endblock %}href="/transactions/new"><i
+                                class="fa-solid fa-circle-plus sideicon"></i>Add expense</a></li>
+                    <li><a {% block activelimit %} {% endblock %}href="/users"><i
+                                class="fa-solid fa-ban sideicon"></i>Set limit</a></li>
                 </ul>
             </nav>
             <img src="https://images2.imgbox.com/72/a8/epymwR98_o.png" alt="logo" width="225px" id="logo">
