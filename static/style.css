@@ -21,7 +21,6 @@ body {
     width: 225px;
     height: 100%;
     padding: 20px 0;
-    transition: all 0.5s ease;
 }
 
 main {
@@ -91,15 +90,34 @@ nav ul li a:hover {
 }
 
 #table tr:hover {
-    background-color: #ddd;
+    background-color: #e47260;
+    color: #f2f2f2;
 }
 
 #table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
+    background-color: #8599f9;
     color: white;
+}
+
+#table a,
+#table a:visited {
+    color: #212529;
+}
+
+#table a:hover {
+    color: #f2f2f2;
+}
+
+.rowlink::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5em;
 }
 
 .container {
@@ -150,7 +168,8 @@ nav ul li a:hover {
     margin: auto;
 }
 
-h1 {
+h1,
+h2 {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 25px;
@@ -202,4 +221,5 @@ h1 {
 .buttons {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5%;
 }

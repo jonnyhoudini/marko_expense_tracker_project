@@ -55,7 +55,7 @@ class="active"
     {% for transaction in transactions %}
 
     <tr>
-        <td><a href="/transactions/{{transaction.id}}">{{transaction.description}}</a></td>
+        <td><a href="/transactions/{{transaction.id}}" class="rowlink">{{transaction.description}}</a></td>
         <td>{{transaction.payee.name}}</td>
         <td>{{transaction.category.name}}</td>
         <td>{{transaction.date}}</td>
