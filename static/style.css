@@ -173,6 +173,7 @@ h2 {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 25px;
+    color: #212529;
 }
 
 .add-expense,
@@ -192,11 +193,13 @@ h2 {
 .add-expense:hover,
 .limit:hover {
     background-color: #bcbae6;
+    color: #f2f2f2;
 }
 
 .add-expense:active,
 .limit:active {
     background-color: #cc7c86;
+    color: #f2f2f2;
 }
 
 /* Total button */
@@ -212,8 +215,15 @@ h2 {
 }
 
 .icon {
+    font-size: 1em;
+    margin-top: 15px;
+    color: #9f90cf;
+}
+
+.warning-p {
     font-size: 0.6em;
     margin-top: 15px;
+    color: #212529;
 }
 
 /* Buttons section */
@@ -222,4 +232,9 @@ h2 {
     display: flex;
     justify-content: space-around;
     margin-bottom: 5%;
+}
+
+.coin {
+    font-size: 2em;
+    margin-top: 10px;
 }

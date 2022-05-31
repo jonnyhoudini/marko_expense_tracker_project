@@ -14,9 +14,9 @@ class="active"
 <section class="buttons">
     <a class="add-expense" href="/transactions/new">
 
-        Add expense
+        <p>Add expense</p>
 
-        <i class="fa-solid fa-coins"></i>
+        <i class="fa-solid fa-coins coin"></i>
 
     </a>
 
@@ -28,13 +28,13 @@ class="active"
 
         {% if total > limit %}
 
-        <p class="icon">You are over the limit</p>
+        <p class="warning-p">You are over the limit</p>
 
         <i class="fa-solid fa-circle-exclamation fa-beat" style="color: #e47260"></i>
 
         {% else %}
 
-        <i class="fa-solid fa-circle-check icon" style="font-size: 1em"></i>
+        <i class="fa-solid fa-circle-check icon"></i>
 
         {% endif %}
     </a>
