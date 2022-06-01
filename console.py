@@ -19,7 +19,7 @@ user_repository.delete_all()
 # Creating a user using the default limit
 user = User("Theodore Templeton")
 user_repository.save(user)
-print(user.id)
+
 # Checking the create and read functions for payees
 payee1 = Payee("La Vita")
 payee_repository.save(payee1)
