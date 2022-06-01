@@ -269,6 +269,8 @@ h2 {
 .buttons {
     display: flex;
     justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
     margin-bottom: 5%;
 }
 
