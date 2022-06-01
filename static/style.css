@@ -326,3 +326,9 @@ div>a:hover {
     color: #6C757D;
 
 }
+
+.questions {
+    width: 50%;
+    margin: 20% auto;
+    text-align: center;
+}
