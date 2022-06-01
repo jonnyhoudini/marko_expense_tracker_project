@@ -24,7 +24,7 @@
     {% for payee in payees %}
 
     <tr>
-        <td><a href="/payees/{{payee.id}}/edit" class="rowlink">{{payee.name}}</a></td>
+        <td><a href="/payees/{{payee.id}}/edit" class="rowlink"></a>{{payee.name}}</td>
         <td>{{payee.number_of_transactions}}</td>
         <td>£{{payee.amount_of_transactions}}</td>
     </tr>

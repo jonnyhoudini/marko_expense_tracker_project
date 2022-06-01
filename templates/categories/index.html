@@ -24,7 +24,7 @@
     {% for category in categories %}
 
     <tr>
-        <td><a href="/categories/{{category.id}}/edit" class="rowlink">{{category.name}}</a></td>
+        <td><a href="/categories/{{category.id}}/edit" class="rowlink"></a>{{category.name}}</td>
         <td>{{category.number_of_transactions}}</td>
         <td>£{{category.amount_of_transactions}}</td>
     </tr>
