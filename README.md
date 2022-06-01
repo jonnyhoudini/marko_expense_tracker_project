@@ -4,6 +4,8 @@
 
 MARKO tracks your business-related expenditure to make it easier when you need to submit an expenses claim to your employer.
 
+https://user-images.githubusercontent.com/72469020/171380895-b079f405-f9ed-4ab3-9306-c9b9fa4d0759.mp4
+
 ## Brief
 
 The app was created as a solo project during week 5 of the CodeClan Professional Software Development course. It meets all of the minimum requirements outined in the brief:
