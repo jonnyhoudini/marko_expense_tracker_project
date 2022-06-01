@@ -3,6 +3,3 @@ class User():
         self.name = name
         self.limit = limit
         self.id = id
-
-    def change_limit(self, limit):
-        self.limit = limit
