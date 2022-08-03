@@ -60,6 +60,13 @@ transaction_repository.save(transaction4)
 transaction5 = Transaction("Coffee", 3, payee1, "15 May 2022", category1)
 transaction_repository.save(transaction5)
 
-
+# Fetching all my saved transactions from the database
+results = transaction_repository.select_all()
+# Finding the ID of the first result
+id = results[0].id
+# Using my select function to search my SQLite database for a particular transaction ID and returining only that transaction
+search_by_id = transaction_repository.select(id)
+# Printing out the transaction as a dictionary
+print(f'The result of my search is: {search_by_id.__dict__}')
 
 pdb.set_trace()

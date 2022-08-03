@@ -125,14 +125,14 @@ nav ul li a:hover {
     background-color: transparent;
 }
 
-.rowlink::before {
+/* .rowlink::before {
     content: "";
     display: block;
     position: absolute;
     left: 0;
     width: 100%;
     height: 1.5em;
-}
+} */
 
 .container {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -331,4 +331,8 @@ div>a:hover {
     width: 50%;
     margin: 20% auto;
     text-align: center;
+}
+
+.click {
+    cursor: pointer;
 }
